@@ -1,5 +1,8 @@
 print("hello world")
+def add_two_numbers(a, b):
+    return a + b
 
+<<<<<<< HEAD
 print("i'm making a change")
 
 
