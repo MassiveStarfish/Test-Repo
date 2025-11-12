@@ -2,11 +2,9 @@ print("hello world")
 def add_two_numbers(a, b):
     return a + b
 
-<<<<<<< HEAD
 print("i'm making a change")
 
 
-=======
 def divide_two_numbers(a, b):
     if b == 0:
         raise ValueError("Cannot divide by zero!")
@@ -41,4 +39,3 @@ if __name__ == "__main__":
             print(f"The result of {num1} divided by {num2} is {result}")
     except ValueError as e:
         print(f"Error: {e}")
->>>>>>> d0d51956c71f40153d37ded709ff9273bc06fe8a
