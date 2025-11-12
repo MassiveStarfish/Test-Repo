@@ -2,19 +2,19 @@ print("hello world")
 def add_two_numbers(a, b):
     return a + b
 
-print("i'm making a change")
-
-
 def divide_two_numbers(a, b):
     if b == 0:
         raise ValueError("Cannot divide by zero!")
     return a / b
 
+def subtract_two_numbers(a, b):
+    return a - b
+
 if __name__ == "__main__":
     operation = input("Would you like to add or divide? (Type 'add' or 'divide'): ").lower()
     
-    while operation not in ['add', 'divide']:
-        operation = input("Invalid choice. Please type 'add' or 'divide': ").lower()
+    while operation not in ['add', 'divide', 'subtract']:
+        operation = input("Invalid choice. Please type 'add', 'subtract' or 'divide': ").lower()
     
     while True:
         try:
@@ -34,6 +34,9 @@ if __name__ == "__main__":
         if operation == 'add':
             result = add_two_numbers(num1, num2)
             print(f"The sum of {num1} and {num2} is {result}")
+        elif operation == 'subtract':
+            result = subtract_two_numbers(num1, num2)
+            print(f"The result of {num1} minus {num2} is {result}")
         else:  # divide
             result = divide_two_numbers(num1, num2)
             print(f"The result of {num1} divided by {num2} is {result}")
