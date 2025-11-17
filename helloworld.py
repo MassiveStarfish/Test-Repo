@@ -10,11 +10,14 @@ def divide_two_numbers(a, b):
 def subtract_two_numbers(a, b):
     return a - b
 
+def multiply_two_numbers(a, b):
+    return a * b
+
 if __name__ == "__main__":
-    operation = input("Would you like to add or divide? (Type 'add' or 'divide'): ").lower()
+    operation = input("Would you like to add, subtract, divide or multiply? (Type 'add', 'subtract', 'divide', or 'multiply'): ").lower()
     
-    while operation not in ['add', 'divide', 'subtract']:
-        operation = input("Invalid choice. Please type 'add', 'subtract' or 'divide': ").lower()
+    while operation not in ['add', 'divide', 'subtract', 'multiply']:
+        operation = input("Invalid choice. Please type 'add', 'subtract', 'divide' or 'multiply': ").lower()
     
     while True:
         try:
@@ -37,6 +40,9 @@ if __name__ == "__main__":
         elif operation == 'subtract':
             result = subtract_two_numbers(num1, num2)
             print(f"The result of {num1} minus {num2} is {result}")
+        elif operation == 'multiply':
+            result = multiply_two_numbers(num1, num2)
+            print(f"The result of {num1} times {num2} is {result}")
         else:  # divide
             result = divide_two_numbers(num1, num2)
             print(f"The result of {num1} divided by {num2} is {result}")
